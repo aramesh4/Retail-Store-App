@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #666666; -fx-border-color: #000000; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OrdersBuildScreenController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="55.0" prefWidth="434.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label layoutX="7.0" layoutY="3.0" prefHeight="50.0" prefWidth="419.0" style="-fx-background-color: #650000;" text="Welcome to order building screen. Please add your items to below table!!" wrapText="true">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.042857142857142816" endY="0.7428571428571429" startY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" layoutX="420.0" layoutY="580.0" prefHeight="17.0" prefWidth="100.0" style="-fx-background-color: #dfe0d7;" text="Total Amount :" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalAmount" editable="false" layoutX="530.0" layoutY="575.0" prefHeight="29.0" prefWidth="100.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="saveOrder" layoutX="180.0" layoutY="620.0" mnemonicParsing="false" onAction="#saveOrderButtonAction" prefHeight="25.0" prefWidth="133.0" text="SAVE ORDER" />
+      <Button fx:id="cacelOrder" layoutX="359.0" layoutY="620.0" mnemonicParsing="false" onAction="#cacelOrderButtonAction" prefHeight="25.0" prefWidth="133.0" text="CANCEL" />
+      <Pane layoutX="25.0" layoutY="110.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #666666; -fx-border-color: #000000; -fx-border-width: 4;">
+         <children>
+            <Label layoutX="20.0" layoutY="10.0" style="-fx-background-color: #dcdfda;" text="Item Number">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="10.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" text="Product ID">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="10.0" style="-fx-background-color: #dcdfda;" text="Quantity">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="480.0" layoutY="10.0" style="-fx-background-color: #dcdfda;" text="Subtotal">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="item10Pane" layoutX="25.0" layoutY="152.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #666666; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="10">
+               <font>
+                  <Font name="Britannic Bold" size="12.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="productName10DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity10" layoutX="335.0" layoutY="9.0" onAction="#quantity10Event" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal10" editable="false" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item30Pane" layoutX="25.0" layoutY="236.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="30" />
+            <ComboBox fx:id="productName30DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity30" layoutX="335.0" layoutY="9.0" onAction="#quantity30ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal30" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item50Pane" layoutX="25.0" layoutY="320.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="50" />
+            <ComboBox fx:id="productName50DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity50" layoutX="335.0" layoutY="9.0" onAction="#quantity50ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal50" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item20Pane" layoutX="25.0" layoutY="194.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="20" />
+            <ComboBox fx:id="productName20DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity20" layoutX="335.0" layoutY="9.0" onAction="#quantity20ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal20" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item40Pane" layoutX="25.0" layoutY="278.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="40" />
+            <ComboBox fx:id="productName40DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity40" layoutX="335.0" layoutY="9.0" onAction="#quantity40ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal40" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item60Pane" layoutX="25.0" layoutY="362.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="60" />
+            <ComboBox fx:id="productName60DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity60" layoutX="335.0" layoutY="9.0" onAction="#quantity60ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal60" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item70Pane" layoutX="25.0" layoutY="404.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="70" />
+            <ComboBox fx:id="productName70DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity70" layoutX="335.0" layoutY="9.0" onAction="#quantity70ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal70" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item80Pane" layoutX="25.0" layoutY="446.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="80" />
+            <ComboBox fx:id="productName80DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity80" layoutX="335.0" layoutY="9.0" onAction="#quantity80ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal80" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item90Pane" layoutX="25.0" layoutY="488.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="90" />
+            <ComboBox fx:id="productName90DD" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity90" layoutX="335.0" layoutY="9.0" onAction="#quantity90ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal90" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Pane fx:id="item100Pane" layoutX="25.0" layoutY="530.0" prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: #00000; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <TextField alignment="CENTER" layoutX="10.0" layoutY="9.0" prefWidth="75.0" style="-fx-background-color: #dcdfda;" text="100" />
+            <ComboBox fx:id="productName100DD1" layoutX="150.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="quantity100" layoutX="335.0" layoutY="9.0" onAction="#quantity100ActionEvent" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+            <TextField fx:id="subtotal100" layoutX="465.0" layoutY="9.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+         </children>
+      </Pane>
+      <Button fx:id="addItem" layoutX="25.0" layoutY="620.0" mnemonicParsing="false" onAction="#addItemButtonAction" prefHeight="25.0" prefWidth="133.0" text="ADD ITEM" />
+      <Label layoutX="25.0" layoutY="83.0" style="-fx-background-color: #dcdfda;" text="Select StoreID :">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="storeIDDD" layoutX="130.0" layoutY="76.0" prefHeight="15.0" prefWidth="100.0" style="-fx-background-color: #dcdfda;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #666666; -fx-border-color: #000000; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.InventoryManagementScreenController">
+   <children>
+      <Pane fx:id="addProductPane" layoutX="7.0" layoutY="200.0" prefHeight="235.0" prefWidth="640.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <Label layoutX="21.0" layoutY="18.0" text="Product ID :" />
+            <Label layoutX="21.0" layoutY="101.0" lineSpacing="1.0" text="Product Description :" />
+            <Label layoutX="21.0" layoutY="59.0" lineSpacing="1.0" text="Product Name :" />
+            <Label layoutX="21.0" layoutY="139.0" lineSpacing="1.0" text="Quantity :" />
+            <Label layoutX="344.0" layoutY="18.0" lineSpacing="1.0" text="Price :" />
+            <Label layoutX="344.0" layoutY="59.0" lineSpacing="1.0" text="ExpiryDate :" />
+            <Label layoutX="344.0" layoutY="101.0" lineSpacing="1.0" text="Discount Percentage :" />
+            <TextField fx:id="CreateProductID" layoutX="142.0" layoutY="14.0" />
+            <TextField fx:id="createProductName" layoutX="142.0" layoutY="55.0" />
+            <TextField fx:id="createProductDesc" layoutX="142.0" layoutY="97.0" />
+            <TextField fx:id="createProductQuantity" layoutX="142.0" layoutY="135.0" />
+            <TextField fx:id="createProductPrice" layoutX="474.0" layoutY="14.0" />
+            <TextField fx:id="createProductDiscount" layoutX="474.0" layoutY="97.0" prefHeight="25.0" prefWidth="111.0" />
+            <Button fx:id="productSave" layoutX="211.0" layoutY="183.0" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="25.0" prefWidth="62.0" text="SAVE" />
+            <Button fx:id="productReset" layoutX="286.0" layoutY="183.0" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="25.0" prefWidth="62.0" text="RESET" />
+            <DatePicker fx:id="createProductExpiryDate" layoutX="474.0" layoutY="55.0" prefHeight="25.0" prefWidth="137.0" />
+            <Label layoutX="346.0" layoutY="139.0" text="Created By :" />
+            <TextField fx:id="createdby" layoutX="474.0" layoutY="135.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="deleteProductPane" layoutX="7.0" layoutY="200.0" prefHeight="84.0" prefWidth="640.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" prefHeight="17.0" prefWidth="89.0" text="Product ID :" />
+            <ComboBox fx:id="delProductIDDD" layoutX="103.0" layoutY="21.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="productDelete" layoutX="348.0" layoutY="21.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="25.0" prefWidth="73.0" text="DELETE" />
+         </children>
+      </Pane>
+      <Pane fx:id="updateProductPane" layoutX="7.0" layoutY="350.0" prefHeight="213.0" prefWidth="640.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <Label layoutX="17.0" layoutY="59.0" lineSpacing="1.0" text="Product Description :" />
+            <Label layoutX="21.0" layoutY="18.0" lineSpacing="1.0" text="Product Name :" />
+            <Label layoutX="21.0" layoutY="93.0" lineSpacing="1.0" text="Quantity :" />
+            <Label layoutX="344.0" layoutY="18.0" lineSpacing="1.0" text="Price :" />
+            <Label layoutX="344.0" layoutY="59.0" lineSpacing="1.0" text="ExpiryDate :" />
+            <Label layoutX="344.0" layoutY="93.0" lineSpacing="1.0" text="Discount Percentage :" />
+            <TextField fx:id="updateProductName" layoutX="142.0" layoutY="14.0" />
+            <TextField fx:id="updateProductDesc" layoutX="142.0" layoutY="55.0" />
+            <TextField fx:id="updateProductQuantity" layoutX="142.0" layoutY="94.0" />
+            <TextField fx:id="updateProductPrice" layoutX="466.0" layoutY="14.0" />
+            <TextField fx:id="updateProductDiscount" layoutX="466.0" layoutY="89.0" prefHeight="25.0" prefWidth="111.0" />
+            <Button fx:id="productUpdate" layoutX="229.0" layoutY="148.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="25.0" prefWidth="82.0" text="UPDATE" />
+            <Button fx:id="updateReset" layoutX="340.0" layoutY="148.0" mnemonicParsing="false" onAction="#updateResetButtonAction" prefHeight="25.0" prefWidth="82.0" text="RESET" />
+            <DatePicker fx:id="updateProductExpiryDate" layoutX="468.0" layoutY="55.0" prefHeight="25.0" prefWidth="161.0" />
+         </children>
+      </Pane>
+      <Button fx:id="BACK" layoutX="487.0" layoutY="33.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="25.0" prefWidth="137.0" text="BACK" />
+      <Button fx:id="addProduct" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#addProductButtonAction" prefHeight="25.0" prefWidth="137.0" text="ADD PRODUCT" />
+      <Button fx:id="deleProduct" layoutX="188.0" layoutY="33.0" mnemonicParsing="false" onAction="#deleProductButtonAction" prefHeight="25.0" prefWidth="137.0" text="DELETE PRODUCT" />
+      <Button fx:id="updateProduct" layoutX="337.0" layoutY="33.0" mnemonicParsing="false" onAction="#updateProductButtonAction" prefHeight="25.0" prefWidth="137.0" text="UPDATE PRODUCT" />
+      <Pane fx:id="updateSearchPane" layoutX="7.0" layoutY="216.0" prefHeight="100.0" prefWidth="640.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <Label layoutX="43.0" layoutY="40.0" text="Product ID :" />
+            <ComboBox fx:id="updateProductIDDD" layoutX="135.0" layoutY="36.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="searchProduct" layoutX="342.0" layoutY="38.0" mnemonicParsing="false" onAction="#searchProductButtonAction" prefHeight="25.0" prefWidth="89.0" text="SEARCH" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

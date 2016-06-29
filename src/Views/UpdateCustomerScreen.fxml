@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #666666; -fx-border-color: #000000; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UpdateCustomerScreenController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="191.0" layoutY="65.0" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;" text="Update Customer Information" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="BACK" layoutX="537.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="25.0" prefWidth="101.0" text="BACK" />
+      <Pane layoutX="7.0" layoutY="155.0" prefHeight="87.0" prefWidth="650.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;">
+         <children>
+            <Button fx:id="customerSearch" layoutX="442.0" layoutY="35.0" mnemonicParsing="false" onAction="#customerSearchButtonAction" prefHeight="25.0" prefWidth="87.0" text="SEARCH" />
+            <Label layoutX="97.0" layoutY="35.0" prefHeight="20.0" prefWidth="101.0" text="Customer ID :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="customerIDDD" layoutX="198.0" layoutY="33.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="customerSearchPane" layoutX="7.0" layoutY="256.0" prefHeight="343.0" prefWidth="650.0" style="-fx-background-color: #dfe0d7; -fx-border-color: #000000; -fx-border-width: 4;" visible="false">
+         <children>
+            <Button fx:id="update" layoutX="163.0" layoutY="291.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="25.0" prefWidth="87.0" text="UPDATE" />
+            <Label layoutX="20.0" layoutY="45.0" prefHeight="20.0" prefWidth="139.0" text="Customer Fullname :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="90.0" prefHeight="20.0" prefWidth="139.0" text="Customer Username :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="354.0" layoutY="48.0" prefHeight="20.0" prefWidth="101.0" text="Phonenumber :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="179.0" prefHeight="20.0" prefWidth="139.0" text="Customer Email ID :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="228.0" prefHeight="20.0" prefWidth="139.0" text="Customer Address :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fullname" layoutX="175.0" layoutY="45.0" />
+            <TextField fx:id="username" layoutX="175.0" layoutY="90.0" />
+            <TextField fx:id="phonenumber" layoutX="462.0" layoutY="45.0" prefHeight="25.0" prefWidth="177.0" />
+            <TextField fx:id="emailid" layoutX="175.0" layoutY="177.0" />
+            <TextField fx:id="address" layoutX="175.0" layoutY="226.0" />
+            <Button fx:id="resert" layoutX="412.0" layoutY="291.0" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="25.0" prefWidth="87.0" text="RESET" />
+            <Button fx:id="delete" layoutX="289.0" layoutY="291.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="25.0" prefWidth="87.0" text="DELETE" />
+            <Label layoutX="20.0" layoutY="137.0" text="Customer Password :" />
+            <TextField fx:id="password" layoutX="175.0" layoutY="133.0" />
+            <TextField fx:id="usertype" layoutX="462.0" layoutY="88.0" />
+            <Label layoutX="360.0" layoutY="94.0" prefHeight="17.0" prefWidth="79.0" text="User Type :" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

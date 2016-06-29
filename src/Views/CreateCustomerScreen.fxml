@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="650.0" styleClass="background" stylesheets="@AdminScreenCss.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CreateCustomerScreenController">
+   <children>
+      <Pane layoutX="84.0" layoutY="149.0" prefHeight="429.0" prefWidth="446.0">
+         <children>
+            <Label layoutX="34.0" layoutY="60.0" text="Full name" textFill="WHITE" />
+            <TextField fx:id="fullname" layoutX="149.0" layoutY="56.0" />
+            <Label layoutX="34.0" layoutY="270.0" text="Postal Address :" textFill="WHITE" />
+            <Label layoutX="33.0" layoutY="221.0" text="Phone Number : " textFill="WHITE" />
+            <Label layoutX="32.0" layoutY="105.0" text="Login Username :" textFill="WHITE" />
+            <Label layoutX="31.0" layoutY="142.0" text="Login Password :" textFill="WHITE" />
+            <Label layoutX="33.0" layoutY="184.0" text="Email ID : " textFill="WHITE" />
+            <TextField fx:id="username" layoutX="149.0" layoutY="101.0" />
+            <TextField fx:id="password" layoutX="149.0" layoutY="138.0" />
+            <TextField fx:id="emailid" layoutX="149.0" layoutY="180.0" />
+            <TextField fx:id="phonenumber" layoutX="149.0" layoutY="217.0" />
+            <TextField fx:id="address" layoutX="149.0" layoutY="266.0" prefHeight="99.0" prefWidth="207.0" />
+            <RadioButton fx:id="adminType" layoutX="80.0" layoutY="386.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="107.0" text="Admin" textFill="WHITE" />
+            <RadioButton fx:id="customertype" layoutX="223.0" layoutY="386.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="107.0" text="Customer" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="84.0" layoutY="83.0" prefHeight="48.0" prefWidth="287.0" text="Please Fill in the below form and hit CREAT ACCOUNT button !!!" wrapText="true">
+         <font>
+            <Font name="Britannic Bold" size="13.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.004761904761904762" endY="0.00952380952380949">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="createAccount" layoutX="216.0" layoutY="602.0" mnemonicParsing="false" onAction="#createAccountButtonAction" prefHeight="25.0" prefWidth="124.0" text="CREATE ACCOUNT" />
+      <Button fx:id="reset" layoutX="359.0" layoutY="602.0" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="25.0" prefWidth="124.0" text="RESET" />
+      <Button fx:id="back" layoutX="561.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="25.0" prefWidth="75.0" text="BACK" />
+   </children>
+</AnchorPane>

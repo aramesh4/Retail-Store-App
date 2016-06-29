@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="650.0" styleClass="storePane" stylesheets="@AdminScreenCss.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StoreManagementScreenController">
+   <children>
+      <Pane fx:id="addStorePane" layoutX="70.0" layoutY="237.0" prefHeight="262.0" prefWidth="402.0" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="94.0" text="Store ID :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="storeID" layoutX="175.0" layoutY="12.0" />
+            <Label layoutX="14.0" layoutY="50.0" prefHeight="17.0" prefWidth="94.0" text="Store Name :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="submit" layoutX="99.0" layoutY="208.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="25.0" prefWidth="83.0" text="SUBMIT" />
+            <Button fx:id="reset" layoutX="231.0" layoutY="208.0" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="25.0" prefWidth="83.0" text="RESET" />
+            <Label layoutX="14.0" layoutY="160.0" prefHeight="17.0" prefWidth="94.0" text="Store EmaiID :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="84.0" prefHeight="20.0" prefWidth="110.0" text="Store Location :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="121.0" prefHeight="20.0" prefWidth="142.0" text="Store Phonenumber :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="storeName" layoutX="175.0" layoutY="48.0" />
+            <TextField fx:id="storeLocation" layoutX="175.0" layoutY="82.0" />
+            <TextField fx:id="storePhonenumber" layoutX="175.0" layoutY="119.0" />
+            <TextField fx:id="storeEmailID" layoutX="175.0" layoutY="158.0" />
+         </children>
+      </Pane>
+      <Button fx:id="back" alignment="CENTER" layoutX="550.0" layoutY="65.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="25.0" prefWidth="100.0" text="BACK" />
+      <Button fx:id="addStore" layoutX="60.0" layoutY="65.0" mnemonicParsing="false" onAction="#addStoreButtonAction" prefHeight="25.0" prefWidth="120.0" text="ADD STORE" />
+      <Button fx:id="deleteStore" layoutX="230.0" layoutY="65.0" mnemonicParsing="false" onAction="#deleteStoreButtonAction" prefHeight="25.0" prefWidth="120.0" text="DELETE STORE" />
+      <Button fx:id="updateStore" layoutX="395.0" layoutY="65.0" mnemonicParsing="false" onAction="#updateStoreButtonAction" prefWidth="120.0" text="UPDATE STORE" />
+      <Pane fx:id="deleteProductPane" layoutX="25.0" layoutY="225.0" prefHeight="85.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" prefHeight="17.0" prefWidth="89.0" text="Store ID :" />
+            <ComboBox fx:id="deleteStoreIDDD" layoutX="103.0" layoutY="21.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="storeDelete" layoutX="348.0" layoutY="21.0" mnemonicParsing="false" onAction="#storeDeleteButtonAction" prefHeight="25.0" prefWidth="100.0" text="DELETE" wrapText="true" />
+         </children>
+      </Pane>
+      <Pane fx:id="updatePane" layoutX="115.0" layoutY="325.0" prefHeight="246.0" prefWidth="400.0" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="50.0" prefHeight="17.0" prefWidth="94.0" text="Store Name :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="update" layoutX="99.0" layoutY="208.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="25.0" prefWidth="100.0" text="UPDATE" />
+            <Button fx:id="updateReset" layoutX="231.0" layoutY="208.0" mnemonicParsing="false" onAction="#updateResetButtonAction" prefHeight="25.0" prefWidth="100.0" text="RESET" />
+            <Label layoutX="14.0" layoutY="160.0" prefHeight="17.0" prefWidth="94.0" text="Store EmaiID :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="84.0" prefHeight="20.0" prefWidth="110.0" text="Store Location :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="121.0" prefHeight="20.0" prefWidth="142.0" text="Store Phonenumber :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="updateStoreName1" layoutX="175.0" layoutY="48.0" />
+            <TextField fx:id="updateStoreLocation1" layoutX="175.0" layoutY="82.0" />
+            <TextField fx:id="updateStorePhonenumber1" layoutX="175.0" layoutY="119.0" />
+            <TextField fx:id="updateStoreEmailID1" layoutX="175.0" layoutY="158.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="searchStorePane" layoutX="25.0" layoutY="225.0" prefHeight="85.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" prefHeight="17.0" prefWidth="89.0" text="Store ID :" />
+            <ComboBox fx:id="searchDtoreIDDD1" layoutX="103.0" layoutY="21.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="storeSearch" layoutX="348.0" layoutY="21.0" mnemonicParsing="false" onAction="#storeSearchButtonAction" prefHeight="25.0" prefWidth="100.0" text="SEARCH" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
